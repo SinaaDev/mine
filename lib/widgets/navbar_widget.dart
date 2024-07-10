@@ -39,7 +39,7 @@ class NavbarWidget extends StatelessWidget {
                 AppStrings.navBarTitle,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
-              Lottie.asset('assets/lotties/verified.json',width: 32,renderCache: RenderCache.drawingCommands)
+              // Lottie.asset('assets/lotties/verified.json',width: 32,renderCache: RenderCache.drawingCommands)
             ],
           ),
           (ResponsiveBreakpoints.of(context).isDesktop)
