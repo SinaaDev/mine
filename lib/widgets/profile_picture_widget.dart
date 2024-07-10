@@ -15,8 +15,8 @@ class ProfilePictureWidget extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
-          image: const DecorationImage(
-              image: AssetImage(Assets.profilePicture)),
+          // image: const DecorationImage(
+          //     image: AssetImage(Assets.profilePicture)),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.1),

@@ -27,6 +27,7 @@ class _PortfolioState extends State<Portfolio> {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        title: 'Alisina Haidari',
         home: const HomeScreen(),
         builder: (context, child) => ResponsiveBreakpoints.builder(
           child: child!,
