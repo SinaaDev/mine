@@ -9,14 +9,17 @@ class ProfilePictureWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return WidgetAnimator(
+      incomingEffect: WidgetTransitionEffects.incomingSlideInFromRight(duration: const Duration(seconds: 4)),
+      atRestEffect: WidgetRestingEffects.fidget(duration: const Duration(seconds: 4)),
+      child: Container(
         height:  MediaQuery.of(context).size.height * 0.45,
         width: ResponsiveBreakpoints.of(context).isDesktop ? MediaQuery.of(context).size.width * 0.45 : MediaQuery.of(context).size.width * 0.8,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
-          // image: const DecorationImage(
-          //     image: AssetImage(Assets.profilePicture)),
+          image: const DecorationImage(
+              image: AssetImage(Assets.profilePicture)),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.1),
@@ -26,7 +29,7 @@ class ProfilePictureWidget extends StatelessWidget {
             )
           ],
         ),
-
+      ),
     );
   }
 }
