@@ -58,9 +58,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 (ResponsiveBreakpoints.of(context).isDesktop)
                     ? const Gap(30)
                     : const Gap(60),
-                SkillsWidget(
-                  skillSectionKey: _skillSectionKey,
-                ),
+                // SkillsWidget(
+                //   skillSectionKey: _skillSectionKey,
+                // ),
                 const Gap(20),
                 ProjectsWidget(
                   projectSectionKey: _projectSectionKey,
