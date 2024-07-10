@@ -9,10 +9,7 @@ class ProfilePictureWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WidgetAnimator(
-      incomingEffect: WidgetTransitionEffects.incomingSlideInFromRight(duration: const Duration(seconds: 4)),
-      atRestEffect: WidgetRestingEffects.fidget(duration: const Duration(seconds: 4)),
-      child: Container(
+    return Container(
         height:  MediaQuery.of(context).size.height * 0.45,
         width: ResponsiveBreakpoints.of(context).isDesktop ? MediaQuery.of(context).size.width * 0.45 : MediaQuery.of(context).size.width * 0.8,
         decoration: BoxDecoration(
@@ -29,7 +26,7 @@ class ProfilePictureWidget extends StatelessWidget {
             )
           ],
         ),
-      ),
+
     );
   }
 }

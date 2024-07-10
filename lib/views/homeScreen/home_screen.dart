@@ -39,16 +39,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Scaffold(
       body: Stack(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height,
-            child: AnimatedBackground(
-              behaviour: RandomParticleBehaviour(
-                  options: const ParticleOptions(
-                      particleCount: 15, maxOpacity: 0.15, spawnMaxSpeed: 170)),
-              vsync: this,
-              child: const SizedBox.shrink(),
-            ),
-          ),
+          // SizedBox(
+          //   height: MediaQuery.of(context).size.height,
+          //   child: AnimatedBackground(
+          //     behaviour: RandomParticleBehaviour(
+          //         options: const ParticleOptions(
+          //             particleCount: 15, maxOpacity: 0.15, spawnMaxSpeed: 170)),
+          //     vsync: this,
+          //     child: const SizedBox.shrink(),
+          //   ),
+          // ),
           SingleChildScrollView(
             controller: scrollController,
             child: Column(
