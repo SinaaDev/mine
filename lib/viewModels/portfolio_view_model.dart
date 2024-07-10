@@ -43,89 +43,89 @@ class PortfolioViewModel extends ChangeNotifier {
   ];
 
   List<ProjectData> projectData = [
-    // ProjectData(
-    //     projectName: "Waste Swift",
-    //     projectDescription:
-    //         'WasteSwift is an innovative mobile application designed to revolutionize waste management in communities and cities. Our user-friendly platform empowers individuals, households, and businesses to manage their waste efficiently and sustainably.',
-    //     projectLink: "https://github.com/SinaaDev",
-    //     projectPicture: Assets.wasteSwiftAppPicture,
-    //     projectTechStacks: [
-    //       Assets.flutterIcon,
-    //       Assets.dartIcon,
-    //       Assets.restApiIcon,
-    //       Assets.mongoDbIcon,
-    //       Assets.postmanIcon
-    //     ]),
-    //
-    // ProjectData(
-    //     projectName: "Tasky",
-    //     projectDescription:
-    //         "Tasky is a powerful task management app designed to streamline your workflow and boost productivity. With an intuitive interface and robust online backend, Tasky helps you manage tasks efficiently, whether you're an individual, a team, or a large organization.",
-    //     projectLink: "https://github.com/SinaaDev/tasky",
-    //     projectPicture: Assets.taskAppPicture,
-    //     projectTechStacks: [
-    //       Assets.flutterIcon,
-    //       Assets.dartIcon,
-    //       Assets.restApiIcon,
-    //     ]),
-    //
-    // ProjectData(
-    //     projectName: "Weather App",
-    //     projectDescription:
-    //         "This WeatherApp is a modern, user-friendly mobile application designed to provide real-time weather updates and forecasts. Built using Flutter and adhering to clean architecture principles, WeatherApp ensures a robust, maintainable, and scalable codebase. The app leverages a reliable weather API to fetch and display accurate weather information for various locations worldwide.",
-    //     projectLink: "https://github.com/SinaaDev/weather_app_clean_arctechture",
-    //     projectPicture: Assets.weatherAppPicture,
-    //     projectTechStacks: [
-    //       Assets.flutterIcon,
-    //       Assets.dartIcon,
-    //       Assets.restApiIcon,
-    //     ]),
-    //
-    // ProjectData(
-    //     projectName: "CoinMarketCap",
-    //     projectDescription:
-    //         "CoinMarketCap is a powerful and intuitive mobile application designed for cryptocurrency enthusiasts and investors who need up-to-the-minute updates on the latest market trends. Whether you're a seasoned trader or just starting your crypto journey, CryptoTrack offers the tools you need to stay informed and make smart investment decisions.",
-    //     projectLink: "https://github.com/SinaaDev/Crypto_Exchange",
-    //     projectPicture: Assets.cryptoAppPicture,
-    //     projectTechStacks: [
-    //       Assets.flutterIcon,
-    //       Assets.dartIcon,
-    //       Assets.restApiIcon,
-    //     ]),
-    //
-    // ProjectData(
-    //     projectName: "VillaLux",
-    //     projectDescription:
-    //         "VillaLux is a premier villa booking app designed to offer you a seamless and sophisticated experience in finding and booking the perfect villa for your next vacation. With a modern and elegant interface, VillaLux caters to travelers seeking luxury, comfort, and convenience for their getaway.",
-    //     projectLink: "https://github.com/SinaaDev/holiday_booking_app_ui",
-    //     projectPicture: Assets.villaAppPicture,
-    //     projectTechStacks: [
-    //       Assets.flutterIcon,
-    //       Assets.dartIcon,
-    //     ]),
-    //
-    // ProjectData(
-    //     projectName: "Nova",
-    //     projectDescription:
-    //         "A clone of NOVA Ai app using Flutter",
-    //     projectLink: "https://github.com/SinaaDev/nova_ai_clone",
-    //     projectPicture: Assets.novaAppPicture,
-    //     projectTechStacks: [
-    //       Assets.flutterIcon,
-    //       Assets.dartIcon,
-    //     ]),
-    //
-    // ProjectData(
-    //     projectName: "QuizMaster",
-    //     projectDescription:
-    //         "QuizMaster is your go-to destination for all things trivia! With a diverse range of quiz categories and a powerful backend API, this app offers an engaging and educational experience for quiz enthusiasts of all levels.",
-    //     projectLink: "https://github.com/SinaaDev/advanced_quizapp",
-    //     projectPicture: Assets.quizAppPicture,
-    //     projectTechStacks: [
-    //       Assets.flutterIcon,
-    //       Assets.dartIcon,
-    //       Assets.restApiIcon
-    //     ]),
+    ProjectData(
+        projectName: "Waste Swift",
+        projectDescription:
+            'WasteSwift is an innovative mobile application designed to revolutionize waste management in communities and cities. Our user-friendly platform empowers individuals, households, and businesses to manage their waste efficiently and sustainably.',
+        projectLink: "https://github.com/SinaaDev",
+        projectPicture: Assets.wasteSwiftAppPicture,
+        projectTechStacks: [
+          Assets.flutterIcon,
+          Assets.dartIcon,
+          Assets.restApiIcon,
+          Assets.mongoDbIcon,
+          Assets.postmanIcon
+        ]),
+
+    ProjectData(
+        projectName: "Tasky",
+        projectDescription:
+            "Tasky is a powerful task management app designed to streamline your workflow and boost productivity. With an intuitive interface and robust online backend, Tasky helps you manage tasks efficiently, whether you're an individual, a team, or a large organization.",
+        projectLink: "https://github.com/SinaaDev/tasky",
+        projectPicture: Assets.taskAppPicture,
+        projectTechStacks: [
+          Assets.flutterIcon,
+          Assets.dartIcon,
+          Assets.restApiIcon,
+        ]),
+
+    ProjectData(
+        projectName: "Weather App",
+        projectDescription:
+            "This WeatherApp is a modern, user-friendly mobile application designed to provide real-time weather updates and forecasts. Built using Flutter and adhering to clean architecture principles, WeatherApp ensures a robust, maintainable, and scalable codebase. The app leverages a reliable weather API to fetch and display accurate weather information for various locations worldwide.",
+        projectLink: "https://github.com/SinaaDev/weather_app_clean_arctechture",
+        projectPicture: Assets.weatherAppPicture,
+        projectTechStacks: [
+          Assets.flutterIcon,
+          Assets.dartIcon,
+          Assets.restApiIcon,
+        ]),
+
+    ProjectData(
+        projectName: "CoinMarketCap",
+        projectDescription:
+            "CoinMarketCap is a powerful and intuitive mobile application designed for cryptocurrency enthusiasts and investors who need up-to-the-minute updates on the latest market trends. Whether you're a seasoned trader or just starting your crypto journey, CryptoTrack offers the tools you need to stay informed and make smart investment decisions.",
+        projectLink: "https://github.com/SinaaDev/Crypto_Exchange",
+        projectPicture: Assets.cryptoAppPicture,
+        projectTechStacks: [
+          Assets.flutterIcon,
+          Assets.dartIcon,
+          Assets.restApiIcon,
+        ]),
+
+    ProjectData(
+        projectName: "VillaLux",
+        projectDescription:
+            "VillaLux is a premier villa booking app designed to offer you a seamless and sophisticated experience in finding and booking the perfect villa for your next vacation. With a modern and elegant interface, VillaLux caters to travelers seeking luxury, comfort, and convenience for their getaway.",
+        projectLink: "https://github.com/SinaaDev/holiday_booking_app_ui",
+        projectPicture: Assets.villaAppPicture,
+        projectTechStacks: [
+          Assets.flutterIcon,
+          Assets.dartIcon,
+        ]),
+
+    ProjectData(
+        projectName: "Nova",
+        projectDescription:
+            "A clone of NOVA Ai app using Flutter",
+        projectLink: "https://github.com/SinaaDev/nova_ai_clone",
+        projectPicture: Assets.novaAppPicture,
+        projectTechStacks: [
+          Assets.flutterIcon,
+          Assets.dartIcon,
+        ]),
+
+    ProjectData(
+        projectName: "QuizMaster",
+        projectDescription:
+            "QuizMaster is your go-to destination for all things trivia! With a diverse range of quiz categories and a powerful backend API, this app offers an engaging and educational experience for quiz enthusiasts of all levels.",
+        projectLink: "https://github.com/SinaaDev/advanced_quizapp",
+        projectPicture: Assets.quizAppPicture,
+        projectTechStacks: [
+          Assets.flutterIcon,
+          Assets.dartIcon,
+          Assets.restApiIcon
+        ]),
 
 
   ];
