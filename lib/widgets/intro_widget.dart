@@ -2,18 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:portfolio/utils/app_strings.dart';
 import 'package:portfolio/widgets/profile_picture_widget.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:widget_and_text_animator/widget_and_text_animator.dart';
 
+import '../viewModels/portfolio_view_model.dart';
+
 class IntroWidget extends StatelessWidget {
-  const IntroWidget({super.key});
+  final GlobalKey homeGlobalKey;
+  const IntroWidget({super.key, required this.homeGlobalKey});
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: homeGlobalKey,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       const Gap(90),
+        (ResponsiveBreakpoints.of(context).isDesktop)
+            ? const Gap(200)
+            : const Gap(90),
         (!ResponsiveBreakpoints.of(context).isDesktop)
             ? const Center(
                 child: ProfilePictureWidget(),
@@ -49,6 +56,11 @@ class IntroWidget extends StatelessWidget {
                                       .textTheme
                                       .headlineLarge),
                               const TextSpan(text: "\n"),
+                              TextSpan(
+                                  text: "Mid-Senior ",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium),
                               TextSpan(
                                   text: "Flutter ",
                                   style: Theme.of(context)
@@ -101,7 +113,30 @@ class IntroWidget extends StatelessWidget {
                         );
                       },
                     ),
-                  )
+                  ),
+                  const Gap(10),
+                  WidgetAnimator(
+                    incomingEffect:
+                       WidgetTransitionEffects.incomingSlideInFromLeft(
+                       duration: const Duration(seconds: 4)),
+                    child: SizedBox(
+                    width: 150,
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        context.read<PortfolioViewModel>().downloadResume();
+                      },
+                      label: const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text("Resume"),
+                          Gap(5),
+                          Icon(Icons.download_outlined)
+                        ],
+                      ),
+                    ),
+                  ),),
+                  const Gap(30),
+
                 ],
               ),
             ),

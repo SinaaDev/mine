@@ -30,11 +30,12 @@ class ContactMeWidget extends StatelessWidget {
           (ResponsiveBreakpoints.of(context).isDesktop)
               ? Row(
                   children: [
+
+                    Expanded(child: getLabel(context)),
+                    const Gap(100),
                     Expanded(
                       child: getTextFields(context),
                     ),
-                    const Gap(100),
-                    Expanded(child: getLabel(context)),
                   ],
                 )
               : Column(

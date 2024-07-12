@@ -1,6 +1,7 @@
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio/widgets/about_me_widget.dart';
 import 'package:portfolio/widgets/navigation_drawer_widget.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -21,6 +22,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   ScrollController scrollController = ScrollController();
+  final GlobalKey _homeSectionKey = GlobalKey();
   final GlobalKey _skillSectionKey = GlobalKey();
   final GlobalKey _aboutSectionKey = GlobalKey();
   final GlobalKey _projectSectionKey = GlobalKey();
@@ -53,10 +55,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             controller: scrollController,
             child: Column(
               children: [
-                const IntroWidget(),
-                const SocialCardsWidget(),
+                IntroWidget(homeGlobalKey: _homeSectionKey,),
+                // const SocialCardsWidget(),
+                Gap(100),
+                AboutMeWidget(aboutSectionKey: _aboutSectionKey,),
                 (ResponsiveBreakpoints.of(context).isDesktop)
-                    ? const Gap(30)
+                    ? const Gap(100)
                     : const Gap(60),
                 SkillsWidget(
                   skillSectionKey: _skillSectionKey,
@@ -75,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
           ),
           NavbarWidget(
+            homeSectionKey: _homeSectionKey,
             scrollToSection: _scrollToSection,
             skillSectionKey: _skillSectionKey,
             aboutSectionKey: _aboutSectionKey,

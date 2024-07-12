@@ -21,23 +21,23 @@ class NavigationDrawerWidget extends StatelessWidget {
         child: Column(
           children: [
             const Gap(10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 200,
-                  width: 200,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage(Assets.profilePicture,),
-                    )
-                  ),
-                )
-              ],
-            ),
-            const Gap(10),
-            const Divider(thickness: 0.3,),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Container(
+            //       height: 200,
+            //       width: 200,
+            //       decoration: const BoxDecoration(
+            //         shape: BoxShape.circle,
+            //         image: DecorationImage(
+            //           image: AssetImage(Assets.profilePicture,),
+            //         )
+            //       ),
+            //     )
+            //   ],
+            // ),
+            // const Gap(10),
+            // const Divider(thickness: 0.3,),
             ListTile(
               leading: const Icon(Icons.person,size: 18,),
               title: Text("About Me",style: Theme.of(context).textTheme.labelSmall,),

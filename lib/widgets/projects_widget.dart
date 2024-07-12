@@ -37,7 +37,7 @@ class ProjectsWidget extends StatelessWidget {
                 final bool isDesktop = constraints.maxWidth > 769;
                 return Column(
                   children: [
-                    ListView.builder(
+                    ListView.separated(
                     shrinkWrap: true,
                     primary: false,
                     physics: const NeverScrollableScrollPhysics(),
@@ -58,10 +58,34 @@ class ProjectsWidget extends StatelessWidget {
                           padding: const EdgeInsets.all(30),
                           child: getContainerMobile(
                               index, context, constraints));
-                    }),
-                    (context.read<PortfolioViewModel>().isProjectViewLimited) ? ElevatedButton(onPressed: (){
-                      context.read<PortfolioViewModel>().setIsProjectViewLimited = !context.read<PortfolioViewModel>().isProjectViewLimited;
-                    }, child: const Text("See More")) : const SizedBox.shrink(),
+                    },
+                      separatorBuilder: (BuildContext context, int index) {
+                      return Row(children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 90),
+                          width: 30,
+                          height: 1,
+                          color: Colors.black,
+                        ),
+                        Gap(8),
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 90),
+                            height: 1,
+                            color: Colors.black12,
+                          ),
+                        )
+                      ],
+
+                      );
+                      },
+                    ),
+                    (context.read<PortfolioViewModel>().isProjectViewLimited) ? Padding(
+                      padding: const EdgeInsets.only(top: 80.0),
+                      child: ElevatedButton(onPressed: (){
+                        context.read<PortfolioViewModel>().setIsProjectViewLimited = !context.read<PortfolioViewModel>().isProjectViewLimited;
+                      }, child: const Text("See More")),
+                    ) : const SizedBox.shrink(),
                   ],
                 );
               });
